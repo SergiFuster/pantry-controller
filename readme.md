@@ -11,7 +11,7 @@
 10. Run executor.py
 11. Run myapp.py script.
 
-If all went well you should check the ingredients and recipes generated on hhtps://127.0.0.1:8000/data/ on your browser.
+If all went well you should check the ingredients and recipes generated on https://127.0.0.1:8000/data/ on your browser.
 
 # Executor.py
 Automates the execution of 3 differents server:
