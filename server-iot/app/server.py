@@ -5,9 +5,13 @@ from fastapi.staticfiles import StaticFiles
 from .model.model import Model
 import os, json, requests
 from datetime import datetime
+from .storage.ingredients_repo import IngredientListMongoRepository
 app = FastAPI()
 
 model = Model()
+ingredient_repo = IngredientListMongoRepository()
+data_directory = "server-iot/app/static"
+app.mount("/static", StaticFiles(directory="server-iot/app/static"), name="static")
 templates = Jinja2Templates(directory="server-iot/app/templates")
 data = "server-iot/app/data"
 controller_url = 'http://127.0.0.1:6000/'
@@ -44,6 +48,7 @@ async def upload_image(file: UploadFile = File(...), background_tasks: Backgroun
             with open(recipes_path, "w") as f:
                 f.write(recipes)
             
+            ingredient_repo.create(ingredients,recipes)
 
         # Process the image in the background to avoid blocking the request
         background_tasks.add_task(update_info, file_path)
