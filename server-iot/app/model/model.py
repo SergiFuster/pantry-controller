@@ -14,7 +14,7 @@ class Model:
         self.prompt_2 = PromptTemplate(
             input_variables=["ingredients"],
             template="With this ingredients: {ingredients}, I want you to give me between 1 and 3 differents food recipes. \
-                Format all responses as JSON objects as {{recipe name : description}}."
+                Format all responses as JSON objects as {{recipe name : description}} nothing else."
         )
 
     def identify_items(self, file_path) -> json:

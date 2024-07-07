@@ -9,7 +9,8 @@
 <body markdown="1">
     <div class="m-5">
         <div class="card w-25">
-            <img src="{{image_url}}" class="card-img-top" alt="">
+            <div class="card-header">
+                <h2>Ingredients</h2>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     {% for key, value in ingredients.items() %}
@@ -21,6 +22,8 @@
         </div>
     </div>
     <div class="card m-5">
+        <div class="card-header">
+            <h2>Recipes</h2>
         <div class="card-body">
             <ul class="list-group list-group-flush">
                 {% for key, value in recipes.items() %}
