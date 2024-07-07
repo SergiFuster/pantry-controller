@@ -16,6 +16,6 @@ If all went well you should check the ingredients and recipes generated on https
 # Executor.py
 Automates the execution of 3 differents server:
 1. Controller server with flask, its the merging point where all other running programs will send messages in order to centralize debug information all in one.
-2. Middleware socket who receibes an image and resend it to the 3. sever.
+2. Middleware socket who receives an image and resend it to the 3. server.
 3. Server with FastAPI which extracts ingredients in json format from the image and extract food recipes from ingredients json, all with Ollama model like Llava.
 
