@@ -45,3 +45,8 @@ def start_server(host='0.0.0.0', port=5000):
         conn.close()
         requests.post(controller_url, json={"message" : "-- MIDDLEWARE : Sending image to server."})
         send_image()
+
+if "__main__" == __name__:
+    start_server()
+    # send_image()
+    # print("Image sent.")

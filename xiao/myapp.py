@@ -10,8 +10,8 @@ import camera
 
 HOST = '192.168.1.83'
 PORT = 5000
-WIFI_SSID = 'MOVISTAR_00A0'
-WIFI_PASSWORD = 'elperrodelhortelano'
+WIFI_SSID = ''
+WIFI_PASSWORD = ''
 REQUEST_INTERVAL = 45
 
 # Configura la red Wi-Fi
